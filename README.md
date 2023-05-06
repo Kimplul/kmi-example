@@ -6,7 +6,15 @@ loads them all into `qemu` along with the example program in `kmi`,
 
 # Building
 
++ `git clone --recurse-submodules https://github.com/Kimplul/kmi-example.git`
++ `cd kmi-example`
 + `make`
+
+If `make` starts complaining about `no targets specified and no makefile found`, you probably forgot
+`--recurse-submodules`. You can fix this by running `git submodule update --init --recursive`.
+
+# Running
+
 + `make run`
 
 You may need `sudo make run` instead, as `make run` generates a disk image which currently
