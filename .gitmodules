@@ -1,0 +1,12 @@
+[submodule "u-boot"]
+	path = rv64/u-boot-kmi
+	url = https://github.com/Kimplul/u-boot.git
+	branch = master
+[submodule "opensbi"]
+	path = rv64/opensbi
+	url = https://github.com/riscv-software-src/opensbi.git
+	branch = master
+[submodule "kmi"]
+	path = kmi
+	url = https://github.com/Kimplul/kmi.git
+	branch = master
