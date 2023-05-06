@@ -1,7 +1,8 @@
 # kmi-example
 
 Example setup for RISC-V 64 bit kmi kernel. Compiles `kmi`, `opensbi` and `u-boot` and
-loads them all into `qemu` along with the example program in `kmi`, `arch/riscv64/conf/init.c`.
+loads them all into `qemu` along with the example program in `kmi`,
+`arch/riscv64/conf/init.c`.
 
 # Building
 
@@ -10,7 +11,8 @@ loads them all into `qemu` along with the example program in `kmi`, `arch/riscv6
 
 You may need `sudo make run` instead, as `make run` generates a disk image which currently
 on some (all?) systems requires root privileges. You should see a `qemu` monitor pop up,
-press `c` in it and in the terminal you launched the commands from you should see something akin to:
+press `c` in it and in the terminal you launched the commands from you should see
+something akin to:
 ```
 make -C kmi run
 make[1]: Entering directory '/home/kimi/Projects/kmi/kmi-example/kmi'
@@ -412,4 +414,5 @@ Shared memory size: 4096
 Hello from the other side!
 ```
 
-`qemu` should exit automatically after this. Note that some parts may take a while, be patient.
+`qemu` should exit automatically after this.
+Note that some parts may take a while, be patient.
