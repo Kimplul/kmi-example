@@ -10,7 +10,7 @@ loads them all into `qemu` along with the example program in `kmi`, `arch/riscv6
 
 You may need `sudo make run` instead, as `make run` generates a disk image which currently
 on some (all?) systems requires root privileges. You should see a `qemu` monitor pop up,
-press `c` in it and in the terminal you launched the commands from you should see:
+press `c` in it and in the terminal you launched the commands from you should see something akin to:
 ```
 make -C kmi run
 make[1]: Entering directory '/home/kimi/Projects/kmi/kmi-example/kmi'
