@@ -6,6 +6,8 @@ loads them all into `qemu` along with the example program in `kmi`,
 
 # Building
 
+Requires `gcc-riscv64-linux-gnu`, most likely available in your package manager.
+
 + `git clone --recurse-submodules https://github.com/Kimplul/kmi-example.git`
 + `cd kmi-example`
 + `make`
