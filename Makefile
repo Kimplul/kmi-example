@@ -4,21 +4,21 @@ all: kmi uboot opensbi
 
 .PHONY: kmi uboot opensbi
 kmi:
-	make -C kmi CROSS_COMPILE=$(CROSS_COMPILE) -j$$(nproc)
+	$(MAKE) -C kmi CROSS_COMPILE=$(CROSS_COMPILE)
 
 uboot:
-	make -C rv64/u-boot-kmi qemu-riscv64_smode_defconfig
-	make -C rv64/u-boot-kmi CROSS_COMPILE=$(CROSS_COMPILE) -j$$(nproc)
+	$(MAKE) -C rv64/u-boot-kmi qemu-riscv64_smode_defconfig
+	$(MAKE) -C rv64/u-boot-kmi CROSS_COMPILE=$(CROSS_COMPILE)
 
 opensbi:
-	make -C rv64/opensbi CROSS_COMPILE=$(CROSS_COMPILE) PLATFORM=generic -j$$(nproc)
+	$(MAKE) -C rv64/opensbi CROSS_COMPILE=$(CROSS_COMPILE) PLATFORM=generic
 
 .PHONY: clean
 clean:
-	make -C kmi clean
-	make -C rv64/u-boot-kmi clean
-	make -C rv64/opensbi clean
+	$(MAKE) -C kmi clean
+	$(MAKE) -C rv64/u-boot-kmi clean
+	$(MAKE) -C rv64/opensbi clean
 
 .PHONY: run
 run:
-	make -C kmi run
+	$(MAKE) -C kmi run
